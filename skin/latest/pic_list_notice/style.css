@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* 새글 스킨 (latest) */
+.notice {
+    width: auto;
+    float:left;
+    text-align: center;
+    width: 50%;
+    padding:10px 20px;
+    background-color: #fff;
+}
+.notice .lat_title {
+    display:block;
+    line-height:30px;
+    font-size:1.1rem;
+    font-weight: 400;
+    color:#666;
+}
+.latest_top_wr .notice:nth-child(3n+1) {clear: both!important}
+.notice ul:after {display:block;visibility:hidden;clear:both;content:""}
+.notice li {
+    display: flex;
+    line-height: 20px;
+    margin:0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #e5ecee;
+}
+.notice li:first-child{
+    display: flex;
+    height: 15px;
+    justify-content: space-between;
+    border: 0;
+}
+.notice li .lt_img {display:none}
+.notice li:first-child .lt_img {display:block;margin:0 0 10px;display:block}
+.notice li:first-child .lt_img img, .notice li .lt_img video {width:100%;height:auto}
+.notice li .pic_li_tit {
+    font-weight:500;
+    font-size:1rem;
+    line-height:40px;
+    vertical-align:middle;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+.notice li .pic_li_tit strong{color:blue;}
+.notice li .fa-lock {display:inline-block;line-height:14px;width:16px;font-size:0.833em;color:#4f818c;background:#cbe3e8;text-align:center;border-radius:2px;font-size:12px;border:1px solid #cbe3e8;vertical-align:middle}
+.notice li .new_icon {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#23db79;background:#b9ffda;text-align:center;border-radius:2px;margin-left:2px;font-weight:bold;vertical-align:unset}
+.notice li .hot_icon {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#ff0000;background:#ffb9b9;text-align:center;border-radius:2px;vertical-align:middle}
+
+.latest_top_wr .pic_li_lt ul li:first-child .lt_img{
+    display: none;
+}
+.notice .lt_info {padding: 0; min-width: 60px;}
+.notice .lt_info .lt_date {color:#888}
+
+.notice .empty_li {line-height:145px;color:#666;text-align:center;padding:0}
+.notice .empty_li:before {background:none;padding:0}
+
+.notice .lt_more {position:absolute;top:-40px;right:51%;display:block;width:40px;line-height:25px;border-radius:3px;text-align:center}
+.notice .lt_more:hover {color:#777}

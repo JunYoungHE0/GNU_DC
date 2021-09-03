@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* 새글 스킨 (latest) */
+.cnt2_info{
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    flex-direction: column;
+    justify-content:center;
+    
+}
+.cnt2_info p{
+    text-align: center !important;
+    font-size: 0.9rem;
+    padding: 5px;
+}

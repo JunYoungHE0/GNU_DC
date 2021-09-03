@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* 새글 스킨 (latest) */
+.newsletter {
+    width: auto;
+    float:left;
+    text-align: center;
+    width: 50%;
+    padding:10px 20px;
+    background-color: #fff;
+}
+.newsletter .lat_title {
+    display:block;
+    line-height:30px;
+    font-size:1.1rem;
+    font-weight: 400;
+    color:#666;
+}
+.latest_top_wr .newsletter:nth-child(3n+1) {clear: both!important}
+.newsletter ul:after {display:block;visibility:hidden;clear:both;content:""}
+.newsletter li {
+    display: flex;
+    line-height: 20px;
+    margin:0px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #e5ecee;
+}
+.newsletter li:first-child {
+    display: flex;
+    height: 15px;
+    justify-content: space-between;
+    border: 0;
+}
+.newsletter li .lt_img {display:none}
+.newsletter li:first-child .lt_img {display:block;margin:0 0 10px;display:block}
+.newsletter li:first-child .lt_img img, .newsletter li .lt_img video {width:100%;height:auto}
+.newsletter li .pic_li_tit {
+    font-weight:500;
+    font-size:1rem;
+    line-height:40px;
+    vertical-align:middle; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+.newsletter li .pic_li_tit strong{color:blue;}
+.newsletter li .fa-lock {display:inline-block;line-height:14px;width:16px;font-size:0.833em;color:#4f818c;background:#cbe3e8;text-align:center;border-radius:2px;font-size:12px;border:1px solid #cbe3e8;vertical-align:middle}
+.newsletter li .new_icon {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#23db79;background:#b9ffda;text-align:center;border-radius:2px;margin-left:2px;font-weight:bold;vertical-align:unset}
+.newsletter li .hot_icon {display:inline-block;width:16px;line-height:16px;font-size:0.833em;color:#ff0000;background:#ffb9b9;text-align:center;border-radius:2px;vertical-align:middle}
+
+.latest_top_wr .pic_li_lt ul li:first-child .lt_img{
+    display: none;
+}
+.newsletter .lt_info {padding:0; min-width: 60px;}
+.newsletter .lt_info .lt_date {color:#888}
+
+.newsletter .empty_li {line-height:145px;color:#666;text-align:center;padding:0}
+.newsletter .empty_li:before {background:none;padding:0}
+
+.newsletter .lt_more {position:absolute;top:-40px;right:0%;display:block;width:40px;line-height:25px;border-radius:3px;text-align:center}
+.newsletter .lt_more:hover {color:#777}

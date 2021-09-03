@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* 새글 스킨 (latest) */
+.pic_eq {position:relative;margin-bottom:0px;background:#fff}
+.pic_eq .lat_title {display:block;line-height:34px;font-size:1.1rem; padding: 0px; color:black}
+.pic_eq {float:left;width:auto; padding: 0 20px}
+.pic_eq .eq_img {margin:0px auto;display:block}
+.pic_eq .eq_img img, .pci_eq .eq .eq_img video{width:100%;height:auto}
+
+.pic_eq .eq_img{
+    width:auto; margin-top:0px; width: 220px; height:80px; background-size: cover; background-position: center center;
+}
+.pic_eq .eq_cont{
+    position: absolute;
+    top:35%
+}
+.pic_eq .eq_cont h3{
+    color:blue;
+    font-size: 1.3rem;   
+}
+@media(max-width:600px){
+    .pic_eq {padding: 0 10px}
+    .pic_eq .eq_img{ max-width: 150px; max-height:51px;}
+}

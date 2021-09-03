@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+
+/* by False9 */
+
+/* 슬라이더 레이아웃 */
+
+.swiper_main .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper_main .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width:100%;
+    padding:0px 5px;
+    border-radius: 4px;
+
+    /* Center slide text vertically */
+    /*
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom:20px;
+}
+.swiper_main > .swiper-pagination {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 12% !important;
+    background-color: transparent;
+}
+.swiper_main .swiper-pagination-bullet{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #595959;
+        opacity: 0.7;
+        margin-right: 5px;
+}
+.swiper_main .swiper-pagination-bullet-active {
+    width: 50px;
+    border-radius: 50px;
+    opacity: 1;
+    background:#fff;
+}
+.swiper_main .swiper-slide {
+    background: #000;
+    width:100%;
+    max-height: 500px;
+    padding:0px;
+    border-radius: 0px;
+
+    /* Center slide text vertically */
+    /*
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    */
+    margin-bottom:0px;
+}
+
+/* 게시물 레이아웃 */
+
+.swiper_main .sw_img {
+    width: 100%;
+    margin-top: 0px;
+    height: 500px;
+    margin-bottom:0px;
+    border-radius: 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left:0px;
+}
+@media all and (max-width:1024px) {
+    .swiper_main .sw_img {width:100%; margin-top:0px; height:40vw; margin-bottom:0px; border-radius: 0px; margin: 0px;}
+    .swiper_main .sw_date {font-size: 12px; color:#666; text-align: left; margin-bottom: 10px;font-weight:normal; margin: 0px;}
+    .swiper_main .sw_tit {margin: 0;}
+    .swiper_main .swiper-slide:nth-child(1n) {
+        width: 50%;
+
+    }
+    .swiper_main .swiper-slide:nth-child(2n) {
+        width: 50%;
+
+    }
+    .swiper_main .swiper-slide:nth-child(3n) {
+        width: 50%;
+
+    }
+}

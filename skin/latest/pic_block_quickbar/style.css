@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 메인배너 하단 아이콘바 부분 스킨(latest) */
+.area_icon2{
+    position: relative;
+    padding: 13px 0;
+    background-color: #e9e9e9;
+}
+.area_icon2:after{content:''; display:block; clear:both;}
+.service{
+    position: absolute;
+    right:0;
+    left:0;
+    top: -50px;
+    border: 0px;
+    border-radius: 5px;
+    max-height: 75px;
+    background-color: #e9e9e9;
+    margin: 0 auto;
+    max-width: 1200px;
+    z-index: 100;
+}
+.area_icon2 .service li{
+    float:left;
+    position: relative;
+    margin: 5px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: calc(100%/4);
+    border-right: 1px solid #bebebe;
+    overflow: hidden;
+}
+.area_icon2 .service li:last-child{
+    border-right:0;
+}
+.service li a{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 24px;
+    font-weight: 700;
+    background-repeat: no-repeat;
+    padding: 20px 0px;
+    background-size: 60px 60px;
+    transition: all 0.4s;
+}
+.area_icon2 .service li:nth-child(1) a{
+    padding-left: 60px;
+}
+.area_icon2 .service li:nth-child(2) a{
+    padding-left: 60px;
+}
+.area_icon2 .service li:nth-child(3) a{
+    padding-left: 60px;
+}
+.area_icon2 .service li:nth-child(4) a{
+    padding-left: 60px;
+}
+@media(min-width:1024px){
+    .service li:hover a{transform: translateY(-5px);}
+}

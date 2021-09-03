@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* 메인 SNS 스킨 허준영 제작 */
+/* 새글 스킨 (latest) */
+.sns_lt {max-width: 220px; background-color: #fff; margin: 0 auto;}
+.sns_lt .sns_title {line-height:40px;font-size:1.2rem;color:#000}
+.sns_lt .sns_title a {color:#000;display:inline-block;position:relative}
+
+.sns_lt .lt_more {position:absolute;top:11px;right:10px;display:block;width:25px;line-height:25px;color:#aaa;border-radius:3px;text-align:center;}
+.sns_lt .lt_more:hover {color:#777}
+.sns_lt ul:after {display:block;visibility:hidden;clear:both;content:""}
+.sns_lt ul {display: flex; padding: 10px 0; justify-content: space-around;}
+.sns_lt li {width:33%; text-align: center; margin: 0 10px;}
+.sns_lt li .lt_img img, .sns_lt li .lt_img video{max-width:55px; max-height: 55px;}
+
+.sns_lt .empty_li {line-height:145px ;color:#666;text-align:center;padding:0}
+.sns_lt .empty_li:before {background:none;padding:0}
