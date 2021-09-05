@@ -100,7 +100,7 @@ include_once(G5_THEME_PATH.'/head.php');
             <!-- 메인 하단 로고배너 -->
             <div id="footbanner">
             <?php
-	        echo latest('swiper_footbanner', 'footbanner', 15,0);
+	         echo mwb_latest_multi('bxslider_footbanner', 'footbanner', 15,0, $order='', $view_notice='', $view_secret='out', $search_opt='');
             ?>
             </div>
         </div>

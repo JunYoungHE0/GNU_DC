@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* by 허준영 */
+
+/* 슬라이더 레이아웃 */
+
+.ftb_area{
+    margin: 0;
+    float:left;
+    max-width: 100%;
+}
+@media(max-width: 600px) {
+    .ftb_area{
+        max-width: 100%;
+    }    
+}
+.ftb_area .layout {
+    border:1px solid #dddddd;
+    border-top: 0;
+    border-bottom: 0;
+    overflow: hidden;
+}
+.ftb_area .bx-wrapper{
+    display: flex;
+    max-height: 68px;
+    border: 0px;
+    border: 2px solid #cecece;
+    margin: 0;
+    align-items: center;
+    background-color: #f2f2f1;
+}
+.ftb_area .bx-viewport ul{
+    display: flex;
+    align-items: center;
+}
+.ftb_area .bx-viewport ul li img{
+    vertical-align: middle;
+    max-height: 40px;
+    max-width: 120px;
+    margin-left: 20px;
+}
+.ftb_area .bx-default-pager, .ftb_are .bx-start{
+    display: none;
+}
+.ftb_area .bx-wrapper .bx-controls-direction a{
+    position:unset;
+    height: 20px;
+}
+.ftb_area .bx-wrapper .bx-controls-direction .bx-prev{
+    margin: 0;
+    background-color: #fff;
+    border-left: 2px solid #cecece;
+    background: url(/project_1/img/fb_prev.png) no-repeat center;
+    z-index: 1;
+}
+.ftb_area .bx-wrapper .bx-controls-direction .bx-next{
+    margin-top: 20px;
+    background-color: #fff;
+    border-left: 2px solid #cecece;
+    background: url(/project_1/img/fb_next.png) no-repeat center;
+    z-index: 1;
+}
+.ftb_area .bx-wrapper .bx-controls{
+    position: relative;
+    float:left;
+}
+.ftb_area .bx-wrapper .bx-controls-direction{
+    max-height: 60;
+    display: flex;
+    flex-direction:column;
+}
+.ftb_area .bx-wrapper .bx-controls-auto {
+    text-align: center;
+    bottom: 20px;
+}
+.ftb_area .bx-wrapper .bx-controls .bx-controls-auto-item{
+    display: block;
+}
+.ftb_area .bx-wrapper .bx-controls .bx-controls-auto-item a{
+    border-left: 2px solid #cecece;
+    border-top: 2px solid #cecece;
+    border-bottom: 2px solid #cecece;
+    margin: 0;
+}
+.ftb_area .bx-wrapper .bx-controls-auto .bx-stop {
+    background-color: #fff;
+    width: 32px;
+    height: 20px;
+    outline: 0;
+    background: url(/project_1/img/fb_stop.png) no-repeat center;
+}
+.ftb_area .bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 32px;
+    height: 20px;
+    outline: 0;
+    background-color: #fff;
+    background: url(/project_1/img/fb_play.png) no-repeat center;
+}
+.ftb_area .bx-wrapper .bx-controls-auto .bx-stop:hover, .ftb_area .bx-wrapper .bx-controls-auto .bx-stop.active, 
+.ftb_area .bx-wrapper .bx-controls-auto .bx-stop:focus, .ftb_area .bx-wrapper .bx-controls-auto .bx-start:hover, 
+.ftb_area .bx-wrapper .bx-controls-auto .bx-star:focus {
+    background-position: center;
+}
+.ftb_area .it_sub {
+    color:#666; line-height: 22px; text-align: left;
+}
+/* .list_it img{display:block; width: auto; height: auto; max-width: 110px; max-height: 30px;} */

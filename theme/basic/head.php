@@ -126,27 +126,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 
     <script>
-    
-    $(function(){
-        $(".gnb_menu_btn").click(function(){
-            $("#gnb_all, #gnb_all_bg").show();
-        });
-        $(".gnb_close_btn, #gnb_all_bg").click(function(){
-            $("#gnb_all, #gnb_all_bg").hide();
-        });
-        $('#gnb_1dul > li').mouseover(function(){
-            $('.gnb_2dul_box' ).stop().slideDown();            
-        });
-        $('#gnb_1dul > li').mouseleave(function(){
-            $('.gnb_2dul_box' ).stop().slideUp();
-        });
+    // $(function(){
         // $('#gnb .gnb_al_li_plus').hover(function(){
         //    $('#hd').addClass('over');
         // }, function(){
         //    $('#hd').removeClass('over');
         // });
-    });
-
+    // });
     </script>
     
 </header>

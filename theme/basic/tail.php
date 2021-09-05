@@ -9,7 +9,7 @@ if (G5_IS_MOBILE) {
     
     </div>
 </div>
-<script src="/project_1/js/index.js"></script>
+<script src="/project_1/js/hjycustomizing.js"></script>
 <!-- } 콘텐츠 끝 -->
 
 
