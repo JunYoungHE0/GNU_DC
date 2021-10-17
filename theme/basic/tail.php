@@ -6,7 +6,7 @@ if (G5_IS_MOBILE) {
     return;
 }
 ?>
-    
+        </div>
     </div>
 </div>
 <script src="/project_1/js/hjycustomizing.js"></script>

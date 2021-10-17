@@ -38,103 +38,90 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
                 <?php }  ?>
             </ul>
-        </div>   
-    </div>
-    <nav id="gnb">
-        <h1 id="logo">
-            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/DC_center_logo.svg" alt="DC상생협력지원센터로고"></a>
-        </h1>
-        <h2>메인메뉴</h2>
-        <div class="gnb_wrap">
-                <ul id="gnb_1dul">
-                    <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
-                    <?php
-				    $menu_datas = get_menu_db(0, true);
-				    $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
-                    $i = 0;
-                    foreach( $menu_datas as $row ){
-                        if( empty($row) ) continue;
-                        $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
-                    ?>
-                    <li class="gnb_1dli <?php echo $add_class; ?>" style="z-index:<?php echo $gnb_zindex--; ?>">
-                        <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
-                        <?php
-                        $k = 0;
-                        foreach( (array) $row['sub'] as $row2 ){
-
-                            if( empty($row2) ) continue; 
-
-                            if($k == 0)
-                            echo '<span class="bg">하위분류</span><ul class="gnb_2dul_box">'.PHP_EOL;
-                        ?>
-                        <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
-                        <?php
-                        $k++;
-                        }   //end foreach $row2
-
-                        if($k > 0)
-                            echo '</ul>'.PHP_EOL;
-                        ?>
-                    </li>
-                    <?php
-                    $i++;
-                    }   //end foreach $row
-
-                    if ($i == 0) {  ?>
-                    <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
-                    <?php } ?>
-                </ul>
-            <div class="gnbbg"></div>
-            <div id="gnb_all">
-            <h2>전체메뉴</h2>
-                <ul class="gnb_al_ul">
-                    <?php
-                    
-                    $i = 0;
-                    foreach( $menu_datas as $row ){
-                    ?>
-                    <li class="gnb_al_li">
-                        <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_al_a"><?php echo $row['me_name'] ?></a>
-                        <?php
-                        $k = 0;
-                        foreach( (array) $row['sub'] as $row2 ){
-                            if($k == 0)
-                                echo '<ul>'.PHP_EOL;
-                        ?>
-                            <li><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
-                        <?php
-                        $k++;
-                        }   //end foreach $row2
-
-                        if($k > 0)
-                            echo '</ul>'.PHP_EOL;
-                        ?>
-                    </li>
-                    <?php
-                    $i++;
-                    }   //end foreach $row
-
-                    if ($i == 0) {  ?>
-                        <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
-                    <?php } ?>
-                </ul>
-                <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
-            </div>
         </div>
-    </nav>
-    
+        <nav id="gnb">
+            <h1 id="logo">
+                <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_IMG_URL ?>/DC_center_logo.svg" alt="DC상생협력지원센터로고"></a>
+            </h1>
+            <h2>메인메뉴</h2>
+            <div class="gnb_wrap">
+                    <ul id="gnb_1dul">
+                        <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                        <?php
+                        $menu_datas = get_menu_db(0, true);
+                        $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
+                        $i = 0;
+                        foreach( $menu_datas as $row ){
+                            if( empty($row) ) continue;
+                            $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
+                        ?>
+                        <li class="gnb_1dli <?php echo $add_class; ?>" style="z-index:<?php echo $gnb_zindex--; ?>">
+                            <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
+                            <?php
+                            $k = 0;
+                            foreach( (array) $row['sub'] as $row2 ){
 
+                                if( empty($row2) ) continue; 
 
-    <script>
-    // $(function(){
-        // $('#gnb .gnb_al_li_plus').hover(function(){
-        //    $('#hd').addClass('over');
-        // }, function(){
-        //    $('#hd').removeClass('over');
-        // });
-    // });
-    </script>
-    
+                                if($k == 0)
+                                echo '<span class="bg">하위분류</span><ul class="gnb_2dul_box">'.PHP_EOL;
+                            ?>
+                            <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
+                            <?php
+                            $k++;
+                            }   //end foreach $row2
+
+                            if($k > 0)
+                                echo '</ul>'.PHP_EOL;
+                            ?>
+                        </li>
+                        <?php
+                        $i++;
+                        }   //end foreach $row
+
+                        if ($i == 0) {  ?>
+                        <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
+                        <?php } ?>
+                    </ul>
+                <div class="gnbbg"></div>
+                <div id="gnb_all">
+                <h2>전체메뉴</h2>
+                    <ul class="gnb_al_ul">
+                        <?php
+                        
+                        $i = 0;
+                        foreach( $menu_datas as $row ){
+                        ?>
+                        <li class="gnb_al_li">
+                            <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_al_a"><?php echo $row['me_name'] ?></a>
+                            <?php
+                            $k = 0;
+                            foreach( (array) $row['sub'] as $row2 ){
+                                if($k == 0)
+                                    echo '<ul>'.PHP_EOL;
+                            ?>
+                                <li><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"><?php echo $row2['me_name'] ?></a></li>
+                            <?php
+                            $k++;
+                            }   //end foreach $row2
+
+                            if($k > 0)
+                                echo '</ul>'.PHP_EOL;
+                            ?>
+                        </li>
+                        <?php
+                        $i++;
+                        }   //end foreach $row
+
+                        if ($i == 0) {  ?>
+                            <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
+                        <?php } ?>
+                    </ul>
+                    <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <!-- } 상단 끝 -->
 
@@ -167,11 +154,10 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <!-- 하위 서브 메뉴 출력 -->
         <li <?php echo $class?>><?php echo $list[$i]['me_name']?></li>
         <?php }
-        }  echo "</ul>".PHP_EOL; echo "</li>".PHP_EOL; ?>
+        }  echo "</ul>".PHP_EOL; ?>
         <?php } else { ?>
         <li><?php echo get_head_title($g5['title']); ?></li>
         <?php } ?>
-        </ul>
         </div>
     </div>
     <div id="container_wr_page">
@@ -198,7 +184,6 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li class="sub_menu"><a href="<?php echo $list[$i]['me_link']?>" target="_<?php echo $list[$i]['me_target']?>" <?php echo $class?>><?php echo $list[$i]['me_name']?></a></li>
             <?php }
             }  echo "</ul>".PHP_EOL; ?>
-            </ul>
             <?php } else { ?>
             <ul></ul>
         <?php } ?>

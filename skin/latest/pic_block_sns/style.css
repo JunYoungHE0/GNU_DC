@@ -8,7 +8,7 @@
 .sns_lt .lt_more {position:absolute;top:11px;right:10px;display:block;width:25px;line-height:25px;color:#aaa;border-radius:3px;text-align:center;}
 .sns_lt .lt_more:hover {color:#777}
 .sns_lt ul:after {display:block;visibility:hidden;clear:both;content:""}
-.sns_lt ul {display: flex; padding: 10px 0; justify-content: space-around;}
+.sns_lt ul {display: flex; margin-bottom: 10px; justify-content: space-around;}
 .sns_lt li {width:33%; text-align: center; margin: 0 10px;}
 .sns_lt li .lt_img img, .sns_lt li .lt_img video{max-width:55px; max-height: 55px;}
 

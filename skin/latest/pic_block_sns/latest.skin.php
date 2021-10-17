@@ -26,7 +26,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
         <li class="sns_li">
-            <a href="<?php echo $list[$i]['wr_link1'];; ?>" target='_blank' class="lt_img"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
+            <a href="<?php echo $list[$i]['wr_link1']; ?>" target='_blank' class="lt_img"><?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?></a>
         </li>
     <?php }  ?>
     <?php if ($list_count == 0) { //게시물이 없을 때  ?>

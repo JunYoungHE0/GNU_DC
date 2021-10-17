@@ -35,7 +35,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php
 if (G5_IS_MOBILE) {
     echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">'.PHP_EOL;
